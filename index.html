@@ -13,10 +13,50 @@
     <form id="order">
       <div class="form-group">
         <h4>What is a good name for your order?</h4>
-        <label for="person1">Enter your name</label>
-        <input id="person1" class="form-control" type="text" required>
+        <label for="person1"></label>
+        <input id="person1" class="form-control" type="text" placeholder="Enter your name"required>
       </div>
-
+      <div class="radio">
+        <h4>What size pie would you like?</h4>
+        <label>
+          <input type="radio" name="size" value="large" checked>
+          16 inches
+        </label>
+        <label>
+          <input type="radio" name="size" value="medium">
+            12 inches
+        </label> 
+        <label>
+          <input type="radio" name="size" value="small">
+          8 inches
+        </label>
+      </div>
+      <div>
+      <h3>Select your toppings</h3>
+      <h6>Choose up to two meats and two veggies</h6>
+      <select class="form-control" id="meat1">
+        <option>Pepperoni</option>
+        <option>Sausage</option>
+        <option>Bacon</option>  
+      <select>
+        <br>
+      <select class="form-control" id="meat2">
+        <option>Canadian-Bacon</option>
+        <option>Chicken</option>
+        <option>Hawaiian-Pork</option>  
+      <select>
+        <br>
+      <select class="form-control" id="veggie1">
+        <option>Onions</option>
+        <option>Peppers</option>
+        <option>Olives</option>  
+      <select>
+        <br>
+      <select class="form-control" id="veggie2">
+        <option>Pineapple</option>
+        <option>Veggie-Sausage</option>
+        <option>Mushrooms</option>  
+      <select>
     </form>
   </div>
 </body>
