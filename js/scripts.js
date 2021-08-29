@@ -7,15 +7,17 @@ function Order(size, toppings) {
 }
 
 Order.prototype.price = function() {
-  if (this.size === "large") {
+  let pizzaSize = this.size
+  if (pizzaSize === "large") {
     this.price = 20;
-  } else if (this.size === 'medium') {
+  } else if (pizzaSize === 'medium') {
     this.price = 15;
-  } else if (this.size === 'small') {
+  } else if (pizzaSize === 'small') {
     this.price = 12;
   } else {
     this.price = 0;
   }
+  return this.price;
 }
 
 
@@ -34,6 +36,6 @@ Order.prototype.price = function() {
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
-
+    let pizzaSize = $("input:radio[name=size]:checked").val();
   })
 })

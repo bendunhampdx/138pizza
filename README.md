@@ -37,3 +37,15 @@ _{Let people know what to do if they run into any issues or have questions, idea
 ## Contact Information
 
 _{Add your contact information here.}_
+
+
+## Specs
+
+* Describe: Order()
+  Test: When user selects a size the price is updated
+  Code: let pizzaSize = this.size, if(pizzaSize === "large") this.price = 20
+  Expected Result = ["20"]
+* 
+* 
+* 
+* 
