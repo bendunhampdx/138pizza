@@ -6,16 +6,21 @@ function Order(size, toppings) {
   this.price = 0;
 }
 
-Order.prototype.price = function() {
+Order.prototype.orderPrice = function() {
   let pizzaSize = this.size
-  if (pizzaSize === "large") {
-    this.price = 20;
-  } else if (pizzaSize === 'medium') {
-    this.price = 15;
-  } else if (pizzaSize === 'small') {
-    this.price = 12;
+  if(pizzaSize === "small") {
+    this.price += 10
+  } else if (pizzaSize === "medium") {
+    this.price += 15
+  } else if (pizzaSize === "large") {
+    this.price += 20
+  }
+  if (this.toppings.length >= 1) {
+    for (let topping of this.toppings) {
+      this.price += 1.50;
+    }
   } else {
-    this.price = 0;
+    this.price;
   }
   return this.price;
 }
