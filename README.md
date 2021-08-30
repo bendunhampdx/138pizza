@@ -47,8 +47,11 @@ _{Add your contact information here.}_
   Expected Result = ["20"]
 
 * Test: When user selects a topping the price is updated
-  Code: order("small", "bacon")
-  Expected Result = ["11.50"]
-* 
+  Code: order("small", "1")
+  Expected Result = ["11"]
+
+* Test: When user selects multiple toppings the price is updated
+  Code: order("small", "1", "1")
+  Expected Result = ["12"]
 * 
 * 

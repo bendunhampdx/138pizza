@@ -63,6 +63,10 @@ $(document).ready(function() {
     event.preventDefault();
     const nameInput = $("input#person1").val();
     let pizzaSize = $("input:radio[name=size]:checked").val();
+    let zaMeat1 = $("#meat1").val();
+    let zaMeat2 = $("#meat2").val();
+    let zaVeg1 = $("#veggie1").val();
+    let zaVeg2 = $("#veggie2").val();
     let order = new Order(pizzaSize, zaMeat1, zaMeat2, zaVeg1, zaVeg2)
     order.orderPrice();
     $('#output').text(order.price)
