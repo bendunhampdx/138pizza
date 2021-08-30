@@ -1,13 +1,20 @@
 // Business Logic
 
-function Order(size, toppings) {
+function Order(size, meatOne, meatTwo, vegOne, vegTwo) {
   this.size = size;
-  this.toppings = toppings;
+  this.meatOne = meatOne;
+  this.meatTwo = meatTwo;
+  this.vegOne = vegOne;
+  this.vegTwo = vegTwo
   this.price = 0;
 }
 
 Order.prototype.orderPrice = function() {
   let pizzaSize = this.size
+  let zaMeat1 = this.meatOne
+  let zaMeat2 = this.meatTwo
+  let zaVeg1 = this.vegOne
+  let zaVeg2 = this.vegTwo
   if(pizzaSize === "small") {
     this.price += 10
   } else if (pizzaSize === "medium") {
@@ -15,11 +22,24 @@ Order.prototype.orderPrice = function() {
   } else if (pizzaSize === "large") {
     this.price += 20
   }
-  if (this.toppings.length >= 1) {
-    for (let topping of this.toppings) {
-      this.price += 1.50;
-    }
-  } else {
+  if (zaMeat1 === "1") {
+    this.price += 1
+  } else if (zaMeat1 === "0") {
+    this.price;
+  }
+  if (zaMeat2 === "1") {
+    this.price += 1
+  } else if (zaMeat2 === "0") {
+    this.price;
+  }
+  if (zaVeg1 === "1") {
+    this.price += 1
+  } else if (zaVeg1 === "0") {
+    this.price;
+  }
+  if (zaVeg2 === "1") {
+    this.price += 1
+  } else if (zaVeg2 === "0") {
     this.price;
   }
   return this.price;
@@ -41,6 +61,10 @@ Order.prototype.orderPrice = function() {
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
+    const nameInput = $("input#person1").val();
     let pizzaSize = $("input:radio[name=size]:checked").val();
+    let order = new Order(pizzaSize, zaMeat1, zaMeat2, zaVeg1, zaVeg2)
+    order.orderPrice();
+    $('#output').text(order.price)
   })
 })

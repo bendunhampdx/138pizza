@@ -45,7 +45,10 @@ _{Add your contact information here.}_
   Test: When user selects a size the price is updated
   Code: let pizzaSize = this.size, if(pizzaSize === "large") this.price = 20
   Expected Result = ["20"]
-* 
+
+* Test: When user selects a topping the price is updated
+  Code: order("small", "bacon")
+  Expected Result = ["11.50"]
 * 
 * 
 * 
