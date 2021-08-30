@@ -69,6 +69,8 @@ $(document).ready(function() {
     let zaVeg2 = $("#veggie2").val();
     let order = new Order(pizzaSize, zaMeat1, zaMeat2, zaVeg1, zaVeg2)
     order.orderPrice();
-    $('#output').text(order.price)
+    $('#output').text(order.price).prepend("$")
+    $(".message").text(nameInput)
+    $(".display").show();
   })
 })

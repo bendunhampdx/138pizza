@@ -1,3 +1,7 @@
 .btn-danger {
   margin-top: 12px;
 }
+
+.display {
+  display: none;
+}
