@@ -45,17 +45,6 @@ Order.prototype.orderPrice = function() {
   return this.price;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // User Interface Logic
 
 $(document).ready(function() {
